@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phone Hunter</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-slate-700" style="font-family: 'Josefin Sans', sans-serif">
+    <header>
+      <h1 class="text-center lg:text-5xl text-2xl font-semibold pt-10">
+        Welcome To My Phone Hunter
+      </h1>
+      <h2 class="text-center lg:text-4xl text-xl font-semibold mt-8">
+        Phone List
+      </h2>
+
+      <section>
+        <div id="my-modal">
+          <input type="checkbox" id="my-modal-4" class="modal-toggle" />
+          <label
+            for="my-modal-4"
+            class="modal cursor-pointer"
+            id="modal display"
+          >
+            <label class="modal-box relative" for="" id="div-element"> </label>
+          </label>
+        </div>
+      </section>
+
+      <div class="text-center m-10">
+        <input
+          class="lg:px-5 px-5 py-1 lg:text-xl text-base w-32"
+          type="text"
+          name=""
+          id="input-field"
+          placeholder=" Search"
+        />
+        <button
+          id="button"
+          style="margin-left: -5px"
+          class="bg-emerald-700 text-white lg:text-xl text-base px-5 py-1 text-xl rounded hover:bg-sky-700"
+        >
+          Search
+        </button>
+      </div>
+    </header>
+    <main>
+      <section>
+        <h1
+          id="warning"
+          class="text-center lg:text-5xl text-2xl pt-10 mt-10 h-24 font-semibold text-red-300 hidden"
+        >
+          " No Result Found. Please Try Again Latter "
+        </h1>
+      </section>
+
+      <section id="processing" class="m-48 hidden screens">
+        <div class="flex items-center justify-center">
+          <button
+            type="button"
+            class="flex items-center rounded-lg bg-green-700 px-4 py-2 text-white"
+            disabled
+          >
+            <svg
+              class="mr-3 h-5 w-5 animate-spin text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <circle
+                class="opacity-25"
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                stroke-width="4"
+              ></circle>
+              <path
+                class="opacity-75"
+                fill="currentColor"
+                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+              ></path>
+            </svg>
+            <span class="font-medium"> Processing... </span>
+          </button>
+        </div>
+      </section>
+
+      <section class="lg:px-40 md:px-10 mt-20">
+        <div
+          class="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 justify-items-center gap-8"
+          id="display-result"
+        ></div>
+      </section>
+
+      <section id="show-more" class="flex justify-center hidden">
+        <button id="btn-show-all" class="btn btn-wide mt-24">Show More</button>
+      </section>
+    </main>
+    <footer
+      class="footer footer-center p-20 bg-base-300 text-base-content mt-24"
+    >
+      <div>
+        <p>Copyright © 2022 - All right reserved by Mahadi Hasan</p>
+      </div>
+    </footer>
+
+    <!-- The button to open modal -->
+
+    <script src="phone.js"></script>
+  </body>
+</html>
